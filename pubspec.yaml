@@ -27,6 +27,8 @@ dependencies:
   flutter_mobx: 1.1.0
 
 dev_dependencies:
+  mobx_codegen:
+  build_runner:
   flutter_test:
     sdk: flutter
 
