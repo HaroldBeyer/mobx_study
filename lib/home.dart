@@ -15,20 +15,28 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            TextField(
+              decoration: InputDecoration(labelText: 'Nome'),
+              onChanged: controller.changeName,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextField(
+              decoration: InputDecoration(labelText: 'Sobrenome'),
+              onChanged: controller.changeSurname,
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Observer(
               builder: (_) {
-                return Text('${controller.counter}',
-                    style: Theme.of(context).textTheme.display1);
+                return Text('${controller.nomeCompleto}');
               },
             )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: controller.incroment,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
