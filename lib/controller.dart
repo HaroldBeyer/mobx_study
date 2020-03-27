@@ -1,5 +1,6 @@
 import 'package:mobx/mobx.dart';
-import 'package:mobx_1/client.dart';
+import 'package:mobx_1/models/client.dart';
+
 part 'controller.g.dart';
 
 class Controller = ControllerBase with _$Controller;
@@ -45,4 +46,6 @@ abstract class ControllerBase with Store {
 
     return null;
   }
+
+  dispose() {}
 }
